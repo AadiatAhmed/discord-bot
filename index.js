@@ -96,4 +96,9 @@ client.on('interactionCreate', async interaction => {
   }
 });
 
-client.login(config.token);
+const dotenv = require('dotenv');
+
+dotenv.config();
+
+client.login(process.env.TOKEN)
+
